@@ -42,3 +42,7 @@
 - Task 3: complete（离线）— runtime 9项和 provider 3项先失败再通过；全套17/17通过。真实API尚未调用。
 - 验证记录：.cache/runtime-red.txt、provider-red.txt、runtime-green.txt（本地测试日志）；正式证据尚未生成。
 - Task 4: complete（离线）— 6项评分用例先失败，模块实现后全套23/23通过。答案正确性与语义支持独立；重试不替换首轮，缺标签保留待核验。
+- Task 5: complete（页面与API离线验收）— 5项HTTP测试通过；浏览器预览D01/E、保存输入、真实请求返回402，run_id=9dcb99b7-85c5-4c73-99c9-469c739badc2。成功模型输出待余额恢复。
+- Task 6: complete（调度代码）— 6项批次测试通过，临时目录40任务、续跑、重试、漂移、停止条件；全套38/38通过。新增全局64次上限及串行锁。正式清单尚未冻结。
+- Task 7: blocked by HTTP 402 — 用户授权DeepSeek最多64次，已尝试1次；依据官方错误码为余额不足。禁止重复自动请求。
+- Task 9: partial — D01正文/ID等价变体完成，预测先于执行保存；正式结果诊断待主实验。

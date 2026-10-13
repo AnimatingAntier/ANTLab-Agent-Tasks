@@ -41,9 +41,10 @@ def score_record(record, label=None, review=None):
         raise ValueError('invalid_semantic_support')
     keys = ('run_id', 'case_id', 'condition', 'variant', 'experiment_id', 'is_primary',
             'attempt_index', 'retry_of', 'run_kind', 'api_status', 'status', 'format_status',
-            'locator_status', 'call_count', 'elapsed_seconds')
+            'locator_status', 'call_count', 'elapsed_seconds', 'usage', 'usage_source')
     row = {key: record.get(key) for key in keys}
     row.update(job_id=record.get('job_id') or ':'.join(str(record.get(k)) for k in ('case_id','condition','variant')),
+               model=(record.get('config') or {}).get('model'), content_raw=parsed.get('content_raw'),
                answer=parsed.get('answer'), citations=parsed.get('citations', []),
                task_correct=correct, semantic_support=semantic,
                evidence_coverage=review.get('evidence_coverage', 'not_checked'),
@@ -139,7 +140,7 @@ def score_directory(runs, manifest_path, labels_path, reviews_path, output_dir):
         rows.append(row)
     summary = summarize(rows, manifest)
     out = Path(output_dir)
-    write_csv(out / 'basic-results.csv', rows)
+    write_csv(out / 'results.csv', rows)
     write_json(out / 'basic-summary.json', summary)
     write_csv(out / 'basic-pairs.csv', summary['pairs'])
     return summary

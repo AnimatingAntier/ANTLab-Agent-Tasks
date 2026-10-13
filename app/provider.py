@@ -25,7 +25,7 @@ def validate_config(config, require_key=False):
     if require_key:
         if not os.environ.get('ASSESSMENT_API_KEY'):
             raise ValueError('missing_api_key')
-        if 'YOUR_' in config['endpoint'] or 'å¡«å†™' in config['model']:
+        if 'YOUR_' in config['endpoint'] or not config['model'].isascii() or 'å¡«å†™' in config['model']:
             raise ValueError('placeholder_config')
 
 

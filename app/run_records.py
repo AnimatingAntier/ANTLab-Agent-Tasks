@@ -51,7 +51,7 @@ def public_config(config):
 
 def source_hashes():
     names = ('student', 'ordering', 'output_checks', 'run_records', 'runner', 'provider',
-             'experiment', 'scoring', 'server', 'cli', 'lexical')
+             'experiment', 'scoring', 'server', 'cli', 'budget', 'lexical', '__init__')
     paths = [ROOT / 'app' / (n + '.py') for n in names] + [ROOT / 'main.py']
     return {p.relative_to(ROOT).as_posix(): digest(p.read_bytes()) for p in paths if p.exists()}
 

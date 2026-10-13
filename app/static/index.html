@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>基础题 · 证据核验</title><link rel="stylesheet" href="/style.css"></head>
+<body><header><span class="eyebrow">ANTLAB / BASIC ASSESSMENT</span><h1>文档证据核验</h1><p>查看输入，执行核验，沿引用追溯原文。</p></header>
+<main><section class="controls"><label>题目<select id="case"></select></label><label>资料条件<select id="condition"></select></label><label>组织方案<select id="variant"><option value="baseline">基线 · 原顺序</option><option value="improved">改进 · 关联证据前置</option></select></label><label>运行方式<select id="mode"><option value="dry">仅保存输入 · 不调用模型</option><option value="mock">模拟链路 · 非实验结果</option><option value="paid" disabled>真实 API · 产生费用</option></select></label><button id="preview">预览输入</button><button id="run" disabled>保存输入</button></section>
+<p id="notice" role="status">正在载入题目…</p>
+<div class="columns"><section><h2>本次输入</h2><p id="question">选择题目后预览。</p><div id="passages"></div><details><summary>实际发送内容与配置</summary><pre id="messages"></pre></details></section>
+<section><h2>运行结果</h2><div id="result" class="empty">尚未运行。模拟输出不计入正式比较。</div><details><summary>完整运行记录</summary><pre id="raw"></pre></details></section></div>
+<section><div class="section-head"><h2>保存记录与逐题对照</h2><button id="refresh">刷新记录</button></div><p>回放仅读取已有记录，不重新调用模型。正式主实验由冻结清单统一执行。</p><div class="columns"><div><label>左侧记录<select id="left"></select></label><pre id="left-view"></pre></div><div><label>右侧记录<select id="right"></select></label><pre id="right-view"></pre></div></div></section>
+</main><footer>引用定位是自动检查；语义支持与答案评价需独立核对。耗时为客户端完整 API 请求耗时。</footer>
+<script>window.SESSION='__SESSION_TOKEN__';</script><script src="/app.js"></script></body></html>

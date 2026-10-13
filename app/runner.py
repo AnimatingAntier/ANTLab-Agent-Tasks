@@ -60,6 +60,14 @@ def preview(cid, condition, variant, config):
 
 
 def execute(cid, condition, variant, config, *, mock=False, dry=False, outdir=None, metadata=None):
+    if mock or dry:
+        return _execute(cid, condition, variant, config, mock=mock, dry=dry, outdir=outdir, metadata=metadata)
+    from .budget import reserve
+    with reserve(ROOT / 'runs', 64):
+        return _execute(cid, condition, variant, config, outdir=outdir, metadata=metadata)
+
+
+def _execute(cid, condition, variant, config, *, mock=False, dry=False, outdir=None, metadata=None):
     metadata = metadata or {}
     allowed_meta = {'experiment_id', 'job_id', 'purpose', 'attempt_index', 'retry_of', 'is_primary', 'preview_verified'}
     if set(metadata) - allowed_meta:

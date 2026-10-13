@@ -21,5 +21,5 @@ def prepare_messages(question, passages):
 
 def improve(question, passages):
     """返回重新组织/选择的原段落列表，不能修改id/source/text或使用答案标签。
-    默认恒等映射仅用于联通，不算已完成改进。可自行扩展结构/调用，须披露与记录。"""
+    按当前问题及原文关联主体记录和补页，不删除材料，不调用模型。"""
     return order_passages(question, passages)

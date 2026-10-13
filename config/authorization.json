@@ -1,0 +1,11 @@
+{
+  "authorized_by": "user",
+  "date": "2026-10-13",
+  "provider": "DeepSeek",
+  "total_request_limit": 64,
+  "development_limit": 16,
+  "main_tasks": 40,
+  "retry_limit": 8,
+  "scope": "基础题；用户明确确认 DeepSeek，最多 64 次",
+  "currency_budget": null
+}
