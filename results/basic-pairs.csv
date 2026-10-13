@@ -1,0 +1,9 @@
+﻿case_id,baseline,improved,outcome
+T01,False,False,unchanged
+T02,True,True,unchanged
+T03,True,True,unchanged
+T04,False,True,improved
+T05,True,False,worsened
+T06,True,False,worsened
+T07,False,False,unchanged
+T08,False,False,unchanged

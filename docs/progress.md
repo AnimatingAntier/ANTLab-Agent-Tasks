@@ -20,18 +20,18 @@
 
 ## 当前状态
 
-| 任务 | 状态 | 证据 |
+| 任务 | 当前状态 | 证据 |
 |---|---|---|
-| 1 实验约定与来源 | 进行中 | reference/source_manifest.json |
-| 2 提示词与组织 | 待执行 | |
-| 3 运行与检查 | 待执行 | |
-| 4 评价 | 待执行 | |
-| 5 页面 | 待执行 | |
-| 6 冻结调度 | 待执行 | |
-| 7 开发真实请求 | 待模型与预算 | 已向用户询问 |
-| 8 正式实验 | 待冻结 | 尚无真实结果 |
-| 9 诊断与变体 | 待执行 | |
-| 10 交付材料 | 待执行 | |
+| 1 实验约定与来源 | 完成 | reference/source_manifest.json |
+| 2 提示词与组织 | 完成 | app/student.py、app/ordering.py |
+| 3 运行与检查 | 完成 | runs/dev、tests/test_runtime.py |
+| 4 评价 | 完成，本人核验待办 | results/scoring、results/results.csv |
+| 5 页面 | 完成 | app/static、真实开发请求与回放 |
+| 6 冻结调度 | 完成 | config/basic-main-v1.json |
+| 7 开发真实请求 | 完成16次 | runs/dev、development-results.csv |
+| 8 正式实验 | 完成40首轮+1重试 | runs/main/basic-main-v1、basic-audit.json |
+| 9 诊断与变体 | 完成，负面结果保留 | runs/diagnostics、runs/variants |
+| 10 交付材料 | 本地完成，本人/发布待办 | README、reports/report.md、docs/resume.md |
 
 原题包没有现成自动测试。已复制原始数据与代码基点，后续从行为测试开始实现。
 
@@ -70,3 +70,16 @@
 - Task 7: complete（助手开发核查）— 页面真实200已验证；开发16次保留全部记录，初版D01拒答促成通用计算提示修订。余额错误与传输错误原样保留，传输错误显式重试有retry_of。
 - 测试隔离修复：开发16次额度用尽后3个provider替身用例受真实预算污染，先观察失败；对这些测试隔离预算计数边界，预算自身仍在临时目录真实测试，全套44/44重新通过。未改付费执行逻辑。
 - 正式冻结前最后决定：使用deepseek-flash非思考模式、temperature=0、max_tokens=512、JSON输出；baseline/improved共用最终提示，改进只重排。尚未人工阅读T答案/正式输出。
+
+## 本次最终进度
+
+- Task 8: complete — basic-main-v1首轮40/40留档，39条API+格式成功，1条传输失败；1次正式显式重试成功且独立保存。审计无缺失、重复、未知job或版本漂移。
+- Task 9: complete — T06实际输入诊断：两次messages完全相同但25%/20%不同；D01变体保持关联，T06并列回退导致顺序不变性失败，报告保留负面结果。均未追加模型调用。
+- Task 10: complete（本地基础材料，本人核验待办）— 逐例41行、5组主汇总、8对配对、参考原句与语义判断、报告6栏目、E1–E7、恢复入口、AI声明齐备。评分来源标记assistant_source_review、reviewed_by_user=false。
+- 主结果R0=4/8，R1=5/8，R2=4/8，K=1/8，改进=3/8。T04改善，T05首轮技术失败、T06错误输出造成两例退化；不宣称整体改善。
+- 总请求57/64；开发16/16、显式重试2/8（开发1、正式1）；54条usage合计92421 Token。未进行额外裁判模型调用。
+- 正式冻结以后仅增加记录、评分依据、诊断和文档，未修改受冻结保护的运行/评分代码。
+- Final: Ruling: 独立仓库没有上游分叉或远程，按用户指定目录保留本地codex/basic-assessment分支 — 无需为不适用的合并/PR菜单打断用户 — 代价是最终GitHub目标与整合由后续用户决定。
+- Final review未判断项的处置：真实兼容性已由成功开发/API记录验证；T参考答案在主请求结束后依据原文推导且留假设；发布/进阶/本人核验按范围待办；全套测试由执行者实跑，未以审查者未执行为通过依据。
+
+- Final verification: 44/44 tests PASS; 40 actual messages/selected passages exactly equal saved preflight; frozen code/config/rubric hashes unchanged; offline re-score byte-identical; original source hashes PASS; git diff --check PASS.

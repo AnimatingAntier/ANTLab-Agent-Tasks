@@ -1,0 +1,52 @@
+{
+  "run_kind": "local_rule",
+  "call_count": 0,
+  "plan_sha256": "bbbf5315033978676d76d5384caa462d571adef7336b69efa58f34eb140942a1",
+  "checks": {
+    "baseline": {
+      "run_id": "4e8e207e-4d6f-4c37-9079-14da25c585f2",
+      "exact_selected_equals_messages": true,
+      "needed_original": true,
+      "needed_selected": true,
+      "needed_in_messages": true,
+      "required_citations_present": true,
+      "answer": "25%",
+      "selected_ids": [
+        "P878722",
+        "P276634",
+        "P151208",
+        "P466322",
+        "P463444",
+        "P873502",
+        "P721388"
+      ],
+      "message_hash": "eff06d49c03cbe0211e0b9a16179303bf998c2667b515a530d3aa2857e36885e"
+    },
+    "improved": {
+      "run_id": "77d12b21-6722-49d3-9a7f-45c8022e827f",
+      "exact_selected_equals_messages": true,
+      "needed_original": true,
+      "needed_selected": true,
+      "needed_in_messages": true,
+      "required_citations_present": true,
+      "answer": "20%",
+      "selected_ids": [
+        "P878722",
+        "P276634",
+        "P151208",
+        "P466322",
+        "P463444",
+        "P873502",
+        "P721388"
+      ],
+      "message_hash": "eff06d49c03cbe0211e0b9a16179303bf998c2667b515a530d3aa2857e36885e"
+    }
+  },
+  "same_config": true,
+  "same_system_message": true,
+  "same_text_set": true,
+  "calculation": "(8+7)/60=25%",
+  "conclusion": "T06主体记录与压力组的锚点评分并列(3,21)，改进回退保留R0顺序。两次实际messages及配置完全相同而输出25%和20%，不支持将这次差异归因于重排；随机性或服务波动仍不能区分。",
+  "same_actual_messages": true,
+  "same_input_sha256": true
+}

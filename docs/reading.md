@@ -27,3 +27,7 @@
 ## 公开系统：ALCE实现
 
 已阅读[官方仓库README](https://github.com/princeton-nlp/ALCE)的Code Structure、Reproducing Baselines、Evaluation和Human Evaluation入口。它把生成与评价分离，配置记录检索及方法，保存输出与配置供后续评价；本项目同样把生成日志和评分文件分开。ALCE的大语料检索与自动指标不能直接移植为本题七段短记录的效果结论；本次没有安装或复跑ALCE。
+
+## 第二个系统的比较边界
+
+[Semantic Reader项目论文](https://arxiv.org/abs/2303.14334)的摘要和研究概述关注AI/HCI增强动态学术阅读界面，涉及发现、效率、理解、综合和可访问性。与ALCE的生成/评价侧重点相比，它更启发原文定位与人工阅读交互。本次仅核查研究概述，未亲测生产界面或复现用户研究；不把文献结果当本项目界面收益证据。

@@ -1,0 +1,198 @@
+{
+  "run_kind": "local_rule",
+  "call_count": 0,
+  "comparisons": [
+    {
+      "case_id": "T01",
+      "baseline_run_id": "9566f471-a9d5-4429-acca-19680438ef86",
+      "improved_run_id": "bcdd30ae-d0ca-45fb-97e7-954dfe8fc754",
+      "same_messages": false,
+      "baseline_ids": [
+        "P761989",
+        "P555495",
+        "P564279",
+        "P130348",
+        "P408739",
+        "P306998",
+        "P455007"
+      ],
+      "improved_ids": [
+        "P555495",
+        "P761989",
+        "P130348",
+        "P306998",
+        "P564279",
+        "P408739",
+        "P455007"
+      ]
+    },
+    {
+      "case_id": "T02",
+      "baseline_run_id": "6a894ff6-029a-4797-a3e9-00c5e08b426c",
+      "improved_run_id": "8ffa33a5-d689-4682-a149-fff918a8c7ad",
+      "same_messages": false,
+      "baseline_ids": [
+        "P505639",
+        "P185211",
+        "P588872",
+        "P552476",
+        "P627886",
+        "P500295",
+        "P169676"
+      ],
+      "improved_ids": [
+        "P552476",
+        "P169676",
+        "P500295",
+        "P627886",
+        "P185211",
+        "P588872",
+        "P505639"
+      ]
+    },
+    {
+      "case_id": "T03",
+      "baseline_run_id": "712f61fb-ea8b-4ad9-8e63-70f3a294d055",
+      "improved_run_id": "76071e2c-91ac-414c-9b75-30b10b2f8bed",
+      "same_messages": false,
+      "baseline_ids": [
+        "P275307",
+        "P350359",
+        "P728510",
+        "P482103",
+        "P723425",
+        "P362285",
+        "P385105"
+      ],
+      "improved_ids": [
+        "P385105",
+        "P362285",
+        "P728510",
+        "P482103",
+        "P275307",
+        "P350359",
+        "P723425"
+      ]
+    },
+    {
+      "case_id": "T04",
+      "baseline_run_id": "a07297a5-e2c7-45f7-8789-ffe676d2375a",
+      "improved_run_id": "aaebed1b-f49a-4ad0-9edb-6fec1fe7f322",
+      "same_messages": false,
+      "baseline_ids": [
+        "P194167",
+        "P758661",
+        "P660995",
+        "P455277",
+        "P208944",
+        "P191263",
+        "P688472"
+      ],
+      "improved_ids": [
+        "P758661",
+        "P660995",
+        "P194167",
+        "P688472",
+        "P455277",
+        "P208944",
+        "P191263"
+      ]
+    },
+    {
+      "case_id": "T05",
+      "baseline_run_id": "1f5b1eda-037a-48ea-a0a8-a62ccc9ae1ca",
+      "improved_run_id": "f166f75b-54d7-4126-b483-ca83751c42c2",
+      "same_messages": false,
+      "baseline_ids": [
+        "P925403",
+        "P371242",
+        "P452207",
+        "P286497",
+        "P876164",
+        "P484198",
+        "P753851"
+      ],
+      "improved_ids": [
+        "P286497",
+        "P452207",
+        "P371242",
+        "P925403",
+        "P876164",
+        "P753851",
+        "P484198"
+      ]
+    },
+    {
+      "case_id": "T06",
+      "baseline_run_id": "4e8e207e-4d6f-4c37-9079-14da25c585f2",
+      "improved_run_id": "77d12b21-6722-49d3-9a7f-45c8022e827f",
+      "same_messages": true,
+      "baseline_ids": [
+        "P878722",
+        "P276634",
+        "P151208",
+        "P466322",
+        "P463444",
+        "P873502",
+        "P721388"
+      ],
+      "improved_ids": [
+        "P878722",
+        "P276634",
+        "P151208",
+        "P466322",
+        "P463444",
+        "P873502",
+        "P721388"
+      ]
+    },
+    {
+      "case_id": "T07",
+      "baseline_run_id": "70617851-3bee-42a3-8eaf-703f2d0ec339",
+      "improved_run_id": "d63b77cb-5165-468a-ba33-bd071543b6e2",
+      "same_messages": false,
+      "baseline_ids": [
+        "P545606",
+        "P694541",
+        "P802784",
+        "P850395",
+        "P304879",
+        "P244387",
+        "P313278"
+      ],
+      "improved_ids": [
+        "P313278",
+        "P304879",
+        "P850395",
+        "P802784",
+        "P545606",
+        "P244387",
+        "P694541"
+      ]
+    },
+    {
+      "case_id": "T08",
+      "baseline_run_id": "66122236-49d3-470f-a4dc-5fa1a0d0edb3",
+      "improved_run_id": "9ebf2ce3-03b0-4d7e-944b-c42067e88b7d",
+      "same_messages": true,
+      "baseline_ids": [
+        "P818400",
+        "P436140",
+        "P394287",
+        "P672045",
+        "P510683",
+        "P183430",
+        "P223300"
+      ],
+      "improved_ids": [
+        "P818400",
+        "P436140",
+        "P394287",
+        "P672045",
+        "P510683",
+        "P183430",
+        "P223300"
+      ]
+    }
+  ]
+}

@@ -1,9 +1,14 @@
 {
-  "status": "blocked_on_development_HTTP_402",
-  "formal_manifest": null,
+  "status": "basic_local_delivery_complete_pending_user_review",
+  "formal_manifest": "config/basic-main-v1.json",
   "expected_main_jobs": 40,
-  "actual_main_jobs": 0,
-  "development_calls": 1,
+  "actual_main_jobs": 40,
+  "formal_retries": 1,
+  "development_calls": 16,
+  "total_calls": 57,
   "authorized_total_calls": 64,
-  "successful_generations": 0
+  "successful_generations": 54,
+  "user_verified": false,
+  "advanced_completed": false,
+  "published": false
 }

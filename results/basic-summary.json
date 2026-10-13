@@ -1,0 +1,153 @@
+{
+  "experiment_id": "basic-main-v1",
+  "conditions": {
+    "R0_improved": {
+      "denominator": 8,
+      "observed": 8,
+      "correct": 3,
+      "accuracy": 0.375,
+      "pending": 0,
+      "provisional": false,
+      "technical_failures": 1,
+      "interrupted": 0,
+      "technical_successes": 7,
+      "accuracy_after_technical_success": 0.42857142857142855,
+      "format_valid": 7,
+      "citation_membership_valid": 7,
+      "semantic_supported": 3,
+      "semantic_pending": 0,
+      "non_abstaining": 4,
+      "median_elapsed_seconds": 1.2421357999992324,
+      "median_success_elapsed_seconds": 1.1620879000001878
+    },
+    "R1": {
+      "denominator": 8,
+      "observed": 8,
+      "correct": 5,
+      "accuracy": 0.625,
+      "pending": 0,
+      "provisional": false,
+      "technical_failures": 0,
+      "interrupted": 0,
+      "technical_successes": 8,
+      "accuracy_after_technical_success": 0.625,
+      "format_valid": 8,
+      "citation_membership_valid": 8,
+      "semantic_supported": 5,
+      "semantic_pending": 0,
+      "non_abstaining": 5,
+      "median_elapsed_seconds": 1.3030389499999728,
+      "median_success_elapsed_seconds": 1.3030389499999728
+    },
+    "R0": {
+      "denominator": 8,
+      "observed": 8,
+      "correct": 4,
+      "accuracy": 0.5,
+      "pending": 0,
+      "provisional": false,
+      "technical_failures": 0,
+      "interrupted": 0,
+      "technical_successes": 8,
+      "accuracy_after_technical_success": 0.5,
+      "format_valid": 8,
+      "citation_membership_valid": 8,
+      "semantic_supported": 4,
+      "semantic_pending": 0,
+      "non_abstaining": 5,
+      "median_elapsed_seconds": 0.8987188499995682,
+      "median_success_elapsed_seconds": 0.8987188499995682
+    },
+    "R2": {
+      "denominator": 8,
+      "observed": 8,
+      "correct": 4,
+      "accuracy": 0.5,
+      "pending": 0,
+      "provisional": false,
+      "technical_failures": 0,
+      "interrupted": 0,
+      "technical_successes": 8,
+      "accuracy_after_technical_success": 0.5,
+      "format_valid": 8,
+      "citation_membership_valid": 8,
+      "semantic_supported": 4,
+      "semantic_pending": 0,
+      "non_abstaining": 4,
+      "median_elapsed_seconds": 1.2218632000003709,
+      "median_success_elapsed_seconds": 1.2218632000003709
+    },
+    "K": {
+      "denominator": 8,
+      "observed": 8,
+      "correct": 1,
+      "accuracy": 0.125,
+      "pending": 0,
+      "provisional": false,
+      "technical_failures": 0,
+      "interrupted": 0,
+      "technical_successes": 8,
+      "accuracy_after_technical_success": 0.125,
+      "format_valid": 8,
+      "citation_membership_valid": 8,
+      "semantic_supported": 6,
+      "semantic_pending": 0,
+      "non_abstaining": 2,
+      "median_elapsed_seconds": 1.072812749998775,
+      "median_success_elapsed_seconds": 1.072812749998775
+    }
+  },
+  "pairs": [
+    {
+      "case_id": "T01",
+      "baseline": false,
+      "improved": false,
+      "outcome": "unchanged"
+    },
+    {
+      "case_id": "T02",
+      "baseline": true,
+      "improved": true,
+      "outcome": "unchanged"
+    },
+    {
+      "case_id": "T03",
+      "baseline": true,
+      "improved": true,
+      "outcome": "unchanged"
+    },
+    {
+      "case_id": "T04",
+      "baseline": false,
+      "improved": true,
+      "outcome": "improved"
+    },
+    {
+      "case_id": "T05",
+      "baseline": true,
+      "improved": false,
+      "outcome": "worsened"
+    },
+    {
+      "case_id": "T06",
+      "baseline": true,
+      "improved": false,
+      "outcome": "worsened"
+    },
+    {
+      "case_id": "T07",
+      "baseline": false,
+      "improved": false,
+      "outcome": "unchanged"
+    },
+    {
+      "case_id": "T08",
+      "baseline": false,
+      "improved": false,
+      "outcome": "unchanged"
+    }
+  ],
+  "missing_jobs": [],
+  "retry_count": 1,
+  "total_calls": 41
+}

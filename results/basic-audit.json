@@ -1,0 +1,14 @@
+{
+  "experiment_id": "basic-main-v1",
+  "expected": 40,
+  "completed": 40,
+  "failed": 1,
+  "pending": 0,
+  "missing_jobs": [],
+  "interrupted": 0,
+  "retries": 1,
+  "duplicate_jobs": [],
+  "unexpected_jobs": [],
+  "version_mismatch_runs": [],
+  "consumed_calls": 41
+}

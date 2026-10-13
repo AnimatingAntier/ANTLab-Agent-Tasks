@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "experiment_id": "basic-main-v1",
+  "frozen_utc": "2026-10-13T12:07:40.601541+00:00",
+  "commit": "b7274fd0894172e2cfa119a68411ebd6f9bb9743",
+  "source_hashes": {
+    "app/student.py": "a6e4456631329bab4c2746e61be2777e514d3bc1e869d57730200a10f1c3fefb",
+    "app/ordering.py": "035503c0a09e499d95c800e4db415faa4044615fae9bc733e4539aa9fe5bb642",
+    "app/output_checks.py": "e1d7af301b953d28dd9c6b0fe48e68b429e4caba7b26d07ee685f248b0195d62",
+    "app/run_records.py": "bf48d9323c49ce1f748278c493fc2ba3151503b4c4d13f4b6244ec265f42f79d",
+    "app/runner.py": "9b35190afe69f8bfd564a9a5182a94e5882a3e52255bc3f6b592a1e8d9a090b1",
+    "app/provider.py": "ae67e77d5832a778030b2fba371676f5442957f5e7e4718b9bbf559f67cd2647",
+    "app/experiment.py": "fb6466041399e87bdf91bdafeae1ca004bbf4c587bbd72f2eacead02c45759e0",
+    "app/scoring.py": "df31ab6e118f73b91d064ef43d31dd193fa19064b78b22b1ba746589857b4b21",
+    "app/server.py": "6530eff1b3bed75a0ba7498d925b63a87534ecc31241e78aca6468ca47dc7dd0",
+    "app/cli.py": "8eee9e5361400432e80073687b49e1e488b1fe3acd06ea47672f5ef6e97d6f3a",
+    "app/budget.py": "08ea36ef3831dc86730330173a0ec62746e9da8859888743b352b55a1309d920",
+    "app/lexical.py": "1b4c56bf067895248db48dcc6c9ac528ad09ce7331b74168d204c52af2bc5dab",
+    "app/__init__.py": "a3e83aae6a559bc59fbabef0236f7608ee0725ca3bbbc55d65000c2193cb55f9",
+    "main.py": "5a237b8184c3be30861606bc5e033b67944d64ad04907cc57c37f2791881905b",
+    "config/authorization.json": "2762f04b923d89d2bc1214a80594455b4c65a107a713221f26a668a2d6e3cbf6"
+  },
+  "data_sha256": "c37cda40ada89a18630dd7be098672f7e942e6f57e6199fe1aa2d6046e2b4961",
+  "config": {
+    "provider": "DeepSeek",
+    "model": "deepseek-flash",
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 512,
+      "thinking": {
+        "type": "disabled"
+      },
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "timeout_seconds": 90
+  },
+  "config_sha256": "72edd65b9232a6c0eaff9824f0eab9198d49b19112d7cb19f46452b82cb96b47",
+  "rubric_sha256": "eb0e06fe5ee11ec2a2c8ffda81d0fa60e0956bd611ad81232d66179ea3301c45",
+  "jobs": [
+    {
+      "job_id": "T07:R0:improved",
+      "case_id": "T07",
+      "condition": "R0",
+      "variant": "improved"
+    },
+    {
+      "job_id": "T01:R1:baseline",
+      "case_id": "T01",
+      "condition": "R1",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T04:R1:baseline",
+      "case_id": "T04",
+      "condition": "R1",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T05:R0:baseline",
+      "case_id": "T05",
+      "condition": "R0",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T05:R0:improved",
+      "case_id": "T05",
+      "condition": "R0",
+      "variant": "improved"
+    },
+    {
+      "job_id": "T02:R0:improved",
+      "case_id": "T02",
+      "condition": "R0",
+      "variant": "improved"
+    },
+    {
+      "job_id": "T04:R2:baseline",
+      "case_id": "T04",
+      "condition": "R2",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T06:R0:baseline",
+      "case_id": "T06",
+      "condition": "R0",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T04:R0:improved",
+      "case_id": "T04",
+      "condition": "R0",
+      "variant": "improved"
+    },
+    {
+      "job_id": "T06:R0:improved",
+      "case_id": "T06",
+      "condition": "R0",
+      "variant": "improved"
+    },
+    {
+      "job_id": "T03:R0:baseline",
+      "case_id": "T03",
+      "condition": "R0",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T05:R1:baseline",
+      "case_id": "T05",
+      "condition": "R1",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T05:R2:baseline",
+      "case_id": "T05",
+      "condition": "R2",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T06:R1:baseline",
+      "case_id": "T06",
+      "condition": "R1",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T06:K:baseline",
+      "case_id": "T06",
+      "condition": "K",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T01:R0:improved",
+      "case_id": "T01",
+      "condition": "R0",
+      "variant": "improved"
+    },
+    {
+      "job_id": "T04:R0:baseline",
+      "case_id": "T04",
+      "condition": "R0",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T08:K:baseline",
+      "case_id": "T08",
+      "condition": "K",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T06:R2:baseline",
+      "case_id": "T06",
+      "condition": "R2",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T07:R0:baseline",
+      "case_id": "T07",
+      "condition": "R0",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T08:R0:improved",
+      "case_id": "T08",
+      "condition": "R0",
+      "variant": "improved"
+    },
+    {
+      "job_id": "T03:R1:baseline",
+      "case_id": "T03",
+      "condition": "R1",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T03:K:baseline",
+      "case_id": "T03",
+      "condition": "K",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T08:R1:baseline",
+      "case_id": "T08",
+      "condition": "R1",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T07:K:baseline",
+      "case_id": "T07",
+      "condition": "K",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T02:K:baseline",
+      "case_id": "T02",
+      "condition": "K",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T05:K:baseline",
+      "case_id": "T05",
+      "condition": "K",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T08:R0:baseline",
+      "case_id": "T08",
+      "condition": "R0",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T01:K:baseline",
+      "case_id": "T01",
+      "condition": "K",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T02:R2:baseline",
+      "case_id": "T02",
+      "condition": "R2",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T01:R0:baseline",
+      "case_id": "T01",
+      "condition": "R0",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T02:R1:baseline",
+      "case_id": "T02",
+      "condition": "R1",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T01:R2:baseline",
+      "case_id": "T01",
+      "condition": "R2",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T03:R0:improved",
+      "case_id": "T03",
+      "condition": "R0",
+      "variant": "improved"
+    },
+    {
+      "job_id": "T03:R2:baseline",
+      "case_id": "T03",
+      "condition": "R2",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T07:R2:baseline",
+      "case_id": "T07",
+      "condition": "R2",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T08:R2:baseline",
+      "case_id": "T08",
+      "condition": "R2",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T04:K:baseline",
+      "case_id": "T04",
+      "condition": "K",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T02:R0:baseline",
+      "case_id": "T02",
+      "condition": "R0",
+      "variant": "baseline"
+    },
+    {
+      "job_id": "T07:R1:baseline",
+      "case_id": "T07",
+      "condition": "R1",
+      "variant": "baseline"
+    }
+  ],
+  "seed": 20261006,
+  "max_calls": 48,
+  "primary_policy": "first_attempt_including_failure",
+  "development_exposure": "D01-D04; evaluation public; no evaluation answer tuning before this freeze",
+  "stop_policy": "budget, source/config/rubric drift, HTTP 401/402/403/429, config errors; no automatic retries"
+}

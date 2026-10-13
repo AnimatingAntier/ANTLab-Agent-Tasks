@@ -1,0 +1,42 @@
+{
+  "budget": {
+    "total": 57,
+    "development": 16,
+    "retries": 2
+  },
+  "scopes": {
+    "all": {
+      "attempts": 57,
+      "calls": 57,
+      "api_ok": 54,
+      "usage_records": 54,
+      "usage_totals": {
+        "prompt_tokens": 91029,
+        "completion_tokens": 1392,
+        "total_tokens": 92421
+      }
+    },
+    "main_including_retry": {
+      "attempts": 41,
+      "calls": 41,
+      "api_ok": 40,
+      "usage_records": 40,
+      "usage_totals": {
+        "prompt_tokens": 68646,
+        "completion_tokens": 1060,
+        "total_tokens": 69706
+      }
+    }
+  },
+  "authorization": {
+    "authorized_by": "user",
+    "date": "2026-10-13",
+    "provider": "DeepSeek",
+    "total_request_limit": 64,
+    "development_limit": 16,
+    "main_tasks": 40,
+    "retry_limit": 8,
+    "scope": "基础题；用户明确确认 DeepSeek，最多 64 次",
+    "currency_budget": null
+  }
+}

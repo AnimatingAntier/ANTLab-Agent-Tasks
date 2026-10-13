@@ -3,7 +3,7 @@
   "python": "3.13.5",
   "platform": "Windows",
   "test_command": "python -m unittest discover -s tests -q",
-  "tests": 39,
+  "tests": 44,
   "failures": 0,
   "cli_smoke": [
     "freeze",
@@ -12,7 +12,13 @@
     "score"
   ],
   "preview_records": 40,
-  "formal_records": 0,
+  "formal_records": 40,
+  "formal_retries": 1,
   "original_source_hashes_verified": true,
-  "credential_scan": "passed"
+  "credential_scan": "passed",
+  "fresh_independent_code_review": true,
+  "actual_vs_preflight_inputs": 40,
+  "offline_score_byte_identical": true,
+  "frozen_source_drift": false,
+  "final_suite_passed": true
 }

@@ -1,19 +1,27 @@
 # 后续从这里继续
 
-工作区：E:/AUniversityStudy/大创/Agent_work/基础；分支 codex/basic-assessment。不要回原题包开发，不创建第二套散落目录。
+工作区：E:/AUniversityStudy/大创/Agent_work/基础；分支 codex/basic-assessment。不要回原题包开发或另造散乱目录。
 
-1. 查看 git status、docs/progress.md、config/authorization.json；运行 python main.py status。当前真实尝试1/64，全部在开发阶段，HTTP402。
-2. 等用户确认DeepSeek余额可用。已授权最多64次，不必重新索取同一预算，也不要打印密钥。配置 config/local.json；凭据路径 E:/MyApp/VibeShell/.env，字段 DEEPSEEK_API_KEY。
-3. 先在页面重做开发题D01/E联通。先前失败run_id为9dcb99b7-85c5-4c73-99c9-469c739badc2；新尝试要保留失败并注明关联。再次402立即停止。
-4. 在剩余开发预算内覆盖D01–D04 R0/K/improved，检查JSON、引用、计算和输入。只有开发题可用于调整。阅读 docs/plan.md 任务7。
-5. 全套测试与Git保存后正式冻结；按README运行40任务、审计。当前没有basic-main-v1正式清单，也没有主实验请求，不能把离线preflight清单当正式冻结。
-6. 主实验结束后才独立推导T01–T08标签和逐例语义核查，不让标签进入推理。保存判断来源，用户未亲自确认不得写human。
-7. score、配对表、正式结果诊断、报告六个栏目、E1–E7索引、决策与声明；清楚标注未核验项。基础与未来进阶在同一最终仓库整合。
+## 当前实际状态
 
-已有证据：
-- runs/dev/e50a4843-9299-4a6e-9b98-354eec26547e.json：页面dry输入。
-- runs/dev/9dcb99b7-85c5-4c73-99c9-469c739badc2.json：页面真实HTTP402。
-- runs/variants/D01-both-20261006/：先保存预测后执行的0调用等价变体。
-- runs/diagnostics/development-coverage.json：开发参考证据与K可见范围检查。
+- 正式basic-main-v1已冻结并完成40首轮；1次正式重试另列。不要重新跑同一轮。
+- 总请求57/64，开发16/16，显式重试2/8（含开发1次）。后续默认只做离线审计与复算，不为了回放发请求。
+- 44项测试通过；独立代码审查的重要问题已修复。
+- 主结果R0 4/8、R1 5/8、R2 4/8、K 1/8、改进3/8。改进没有整体提升。
+- 逐例参考与语义核查由助手依原文整理，用户本人未核验；T01参考解释有显式假设。
+- T06实际messages相同而输出不同；同题等价变体因锚点并列回退而顺序变化，不能声称普遍稳健。
 
-没有模型输出之前，不补填正确率、改进收益或正式诊断。总耗时不等同TTFT或Prefill，也不能反推GPU型号。
+## 后续顺序
+
+1. 读reports/report.md、docs/decisions.md及git status；python main.py status确认调用数。
+2. python main.py audit --manifest config/basic-main-v1.json --runs runs/main/basic-main-v1。
+3. 用户复核results/scoring/labels.json的原句与推导、reviews.jsonl的关键语义判断。修改评价要追加修订依据，不改原始日志，不冒写human。
+4. python main.py score --runs runs/main/basic-main-v1 --manifest config/basic-main-v1.json --output-dir results。
+5. 如需新算法实验，保存本轮不动，明确探索版本、新ID与新预算；不能在本轮T结果上调参再回填。
+6. 进阶与基础需整合到同一最终GitHub仓库和一份报告；用户未指定远程，未发布或登记。最终本人声明与提交由用户核验。
+
+## 运行与凭据
+
+python main.py serve默认离线，浏览器127.0.0.1:8765。config/local.json不提交，已有凭据位于E:/MyApp/VibeShell/.env，仅读取DEEPSEEK_API_KEY；不要输出密钥。真实调用的旧授权上限不会因重启自动归零，程序以保留日志计数。
+
+冻结代码基点b7274fd0894172e2cfa119a68411ebd6f9bb9743，UTC 2026-10-13 12:07:40。主流程文件受hash保护；报告、评价与独立诊断不属于生成代码。

@@ -39,5 +39,140 @@
     "reason": "乙与丙合格，丙预算更低。",
     "provenance": "published_development_reference",
     "reviewed_by_user": false
+  },
+  "T01": {
+    "answer_type": "name",
+    "expected_answer": "S24",
+    "reference_passages": [
+      "P555495",
+      "P761989"
+    ],
+    "reason": "QY71要求同一快照完成问答、引用定位及冷启动恢复且无未关闭定位问题。S23缺坐标映射，S25有三项未关闭问题，S24完成三项检查，按记录无另报未关闭问题判为S24。",
+    "assumption": "将完成三项检查且未列出未关闭问题视作满足评审规则；用户尚未核验此解释。",
+    "provenance": "assistant_source_review_after_frozen_main_runs",
+    "reviewed_by_user": false,
+    "created_utc": "2026-10-13T12:12:34.868651+00:00",
+    "evidence_quotes": {
+      "P555495": "栖云项目R7版本在2026-02的记录：交付评审QY71记录S23完成问答回归但缺坐标映射；S24完成问答、引用定位及冷启动恢复；S25的定位复核留三项未关闭问题。",
+      "P761989": "批次QY71的复核补页：QY71的release_snapshot规则要求同一快照完成上述三项检查，且不存在未关闭定位问题；评审表按该规则发布。"
+    }
+  },
+  "T02": {
+    "answer_type": "percent",
+    "expected_answer": "76%",
+    "reference_passages": [
+      "P552476",
+      "P169676"
+    ],
+    "reason": "LX63固定100条为分母，76条完全支持；部分支持不计，76/100=76%。",
+    "provenance": "assistant_source_review_after_frozen_main_runs",
+    "reviewed_by_user": false,
+    "created_utc": "2026-10-13T12:12:34.868687+00:00",
+    "evidence_quotes": {
+      "P552476": "临溪项目R6版本在2026-03的记录：冻结评测集LX63固定100条主张为分母，后续复跑不能剔除无引用和格式异常主张。",
+      "P169676": "批次LX63的复核补页：LX63人工复核显示76条完全支持、9条部分支持、7条矛盾、8条无可定位引用；完整支持只计完全支持。"
+    }
+  },
+  "T03": {
+    "answer_type": "number",
+    "expected_answer": "2.6",
+    "reference_passages": [
+      "P385105",
+      "P362285"
+    ],
+    "reason": "同一WS84批次、同样36题，基础9.4秒减候选6.8秒=2.6秒。",
+    "provenance": "assistant_source_review_after_frozen_main_runs",
+    "reviewed_by_user": false,
+    "created_utc": "2026-10-13T12:12:34.868698+00:00",
+    "evidence_quotes": {
+      "P385105": "望舒项目R8版本在2026-04的记录：同机顺序批次WS84的基础链路处理36个固定问题，客户端完整响应耗时中位数为9.4秒。",
+      "P362285": "批次WS84的复核补页：WS84候选链路处理同样36个问题，中位数为6.8秒；两次运行固定输入顺序和输出上限。"
+    }
+  },
+  "T04": {
+    "answer_type": "name",
+    "expected_answer": "流程乙",
+    "aliases": [
+      "乙"
+    ],
+    "reference_passages": [
+      "P758661",
+      "P660995"
+    ],
+    "reason": "NZ95先限定错误证据<=3；甲6、丙5均不合格，只有乙2合格，因此选择流程乙。",
+    "provenance": "assistant_source_review_after_frozen_main_runs",
+    "reviewed_by_user": false,
+    "created_utc": "2026-10-13T12:12:34.868705+00:00",
+    "evidence_quotes": {
+      "P758661": "南枝项目R9版本在2026-05的记录：核验表NZ95记录流程甲召回17条证据、引入6条错误证据；流程乙召回16条、错误2条；流程丙召回19条、错误5条。",
+      "P660995": "批次NZ95的复核补页：NZ95的正式规则先要求错误证据不超过3条，再最大化召回；流程名称和调用次数不参与第一轮筛选。"
+    }
+  },
+  "T05": {
+    "answer_type": "insufficient",
+    "expected_answer": "证据不足",
+    "reference_passages": [
+      "P286497",
+      "P452207"
+    ],
+    "reason": "TL46只记录客户端耗时、状态、模型与计费单位，明确未采集功率或能耗，不能推出平均焦耳。",
+    "provenance": "assistant_source_review_after_frozen_main_runs",
+    "reviewed_by_user": false,
+    "created_utc": "2026-10-13T12:12:34.868711+00:00",
+    "evidence_quotes": {
+      "P286497": "听澜项目R4版本在2026-06的记录：校内组TL46经共享网关完成32次问答，客户端记录请求耗时、响应状态和模型显示名称。",
+      "P452207": "批次TL46的复核补页：TL46的服务响应保留输入与输出计费单位，未采集功率、能耗、节点配置或服务端并发。"
+    }
+  },
+  "T06": {
+    "answer_type": "percent",
+    "expected_answer": "25%",
+    "reference_passages": [
+      "P873502",
+      "P721388"
+    ],
+    "reason": "SY37明确把8项超时与7项格式不合法均列为技术失败，固定60项分母，(8+7)/60=25%。",
+    "provenance": "assistant_source_review_after_frozen_main_runs",
+    "reviewed_by_user": false,
+    "created_utc": "2026-10-13T12:12:34.868717+00:00",
+    "evidence_quotes": {
+      "P873502": "松影项目R3版本在2026-07的记录：首次执行清单SY37有60项任务；45项返回合法结果、8项超时、7项格式不合法；每项只计初次结果。",
+      "P721388": "批次SY37的复核补页：SY37质量口径把超时和格式不合法均列为技术失败，分母为全部60项；人工重试另列。"
+    }
+  },
+  "T07": {
+    "answer_type": "name",
+    "expected_answer": "丙",
+    "aliases": [
+      "方案丙"
+    ],
+    "reference_passages": [
+      "P313278",
+      "P850395"
+    ],
+    "reason": "ZQ58先满足支持率>=85%且P50<=7秒；甲84%不合格，乙7.4秒不合格，只有丙86%且6.8秒合格。",
+    "provenance": "assistant_source_review_after_frozen_main_runs",
+    "reviewed_by_user": false,
+    "created_utc": "2026-10-13T12:12:34.868724+00:00",
+    "evidence_quotes": {
+      "P313278": "知秋项目R5版本在2026-08的记录：资源表ZQ58记录甲完整支持84%、P50为6.1秒、2次调用；乙87%、7.4秒、3次；丙86%、6.8秒、2次。",
+      "P850395": "批次ZQ58的复核补页：ZQ58决策先要求完整支持率至少85%且P50不高于7秒，再比较平均调用次数和完整耗时。"
+    }
+  },
+  "T08": {
+    "answer_type": "name",
+    "expected_answer": "K17",
+    "reference_passages": [
+      "P183430",
+      "P223300"
+    ],
+    "reason": "GZ69要求文本问答、区域定位、会话恢复三项全过；K16定位偏移，K18恢复失败，K17三项全过。",
+    "provenance": "assistant_source_review_after_frozen_main_runs",
+    "reviewed_by_user": false,
+    "created_utc": "2026-10-13T12:12:34.868730+00:00",
+    "evidence_quotes": {
+      "P183430": "归舟项目R6版本在2026-09的记录：复核表GZ69显示K16文本问答通过、区域定位4项偏移；K17三项检查通过；K18解析较快但会话恢复2项失败。",
+      "P223300": "批次GZ69的复核补页：GZ69的selected_snapshot规则要求文本问答、区域定位和会话恢复三项检查全部通过。"
+    }
   }
 }
