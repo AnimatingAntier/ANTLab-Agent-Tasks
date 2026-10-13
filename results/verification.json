@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-13",
+  "python": "3.13.5",
+  "platform": "Windows",
+  "test_command": "python -m unittest discover -s tests -q",
+  "tests": 39,
+  "failures": 0,
+  "cli_smoke": [
+    "freeze",
+    "batch --dry-run",
+    "audit",
+    "score"
+  ],
+  "preview_records": 40,
+  "formal_records": 0,
+  "original_source_hashes_verified": true,
+  "credential_scan": "passed"
+}

@@ -51,7 +51,7 @@ def score_record(record, label=None, review=None):
                abstention_reasonable=review.get('abstention_reasonable'),
                judgment_source=review.get('judgment_source', 'unverified'),
                reason=review.get('reason', (label or {}).get('reason', '未建立参考判断')),
-               technical_ok=technical, review_pending=correct is None or semantic == 'not_checked',
+               technical_ok=technical, review_pending=correct is None or (technical and semantic == 'not_checked'),
                label_source=(label or {}).get('provenance'))
     return row
 
@@ -80,17 +80,18 @@ def summarize(rows, manifest):
         interrupted = sum(r.get('status') == 'started' for r in observed)
         times = [r['elapsed_seconds'] for r in observed if isinstance(r.get('elapsed_seconds'), (int, float))]
         good = [r for r in observed if r['technical_ok']]
+        semantic_pending = sum(r['semantic_support'] == 'not_checked' for r in good)
         success_times = [r['elapsed_seconds'] for r in good if isinstance(r.get('elapsed_seconds'), (int,float))]
         conditions[name] = dict(
             denominator=len(entries), observed=len(observed), correct=correct,
-            accuracy=correct / len(entries), pending=pending, provisional=bool(pending or interrupted),
+            accuracy=correct / len(entries), pending=pending, provisional=bool(pending or interrupted or semantic_pending),
             technical_failures=sum(not r['technical_ok'] and r.get('status') != 'started' for r in observed),
             interrupted=interrupted, technical_successes=len(good),
             accuracy_after_technical_success=(sum(r['task_correct'] is True for r in good)/len(good) if good else None),
             format_valid=sum(r.get('format_status') == 'valid' for r in observed),
             citation_membership_valid=sum(r.get('locator_status') == 'valid' for r in observed),
             semantic_supported=sum(r['semantic_support'] == 'supported' for r in observed),
-            semantic_pending=sum(r['semantic_support'] == 'not_checked' for r in observed),
+            semantic_pending=semantic_pending,
             non_abstaining=sum(r.get('answer') not in (None, '', '证据不足') for r in observed),
             median_elapsed_seconds=statistics.median(times) if times else None,
             median_success_elapsed_seconds=statistics.median(success_times) if success_times else None)
@@ -130,6 +131,12 @@ def write_csv(path, rows, fields=None):
 
 
 def score_directory(runs, manifest_path, labels_path, reviews_path, output_dir):
+    from .experiment import audit_manifest
+    audit = audit_manifest(manifest_path, runs)
+    if audit['version_mismatch_runs']:
+        raise ValueError('record_version_mismatch_cannot_publish_score')
+    if audit['duplicate_jobs'] or audit['unexpected_jobs']:
+        raise ValueError('invalid_primary_jobs_cannot_publish_score')
     manifest, labels = read_json(manifest_path), read_json(labels_path)
     reviews = load_reviews(reviews_path)
     rows = []

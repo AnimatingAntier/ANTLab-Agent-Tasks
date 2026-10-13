@@ -50,9 +50,11 @@ class ExperimentTests(unittest.TestCase):
 
     def test_started_attempt_blocks_automatic_resend(self):
         from app.run_records import read_json
-        job=read_json(self.manifest)['jobs'][0]
+        manifest=read_json(self.manifest)
+        job=manifest['jobs'][0]
         write_json(self.root/'runs'/'interrupted.json',dict(job,run_id='interrupted',experiment_id='basic-main-v1',
-            status='started',run_kind='live_api',is_primary=True,call_count=0))
+            status='started',run_kind='live_api',is_primary=True,call_count=0,
+            source_hashes=manifest['source_hashes'],config_sha256=manifest['config_sha256'],data_sha256=manifest['data_sha256']))
         with patch('app.experiment.validate_config'), patch('app.experiment.execute',side_effect=self.fake) as call:
             self.m.run_batch(self.manifest,self.config,self.root/'runs',paid=True,resume=True)
         self.assertEqual(call.call_count,39)

@@ -98,6 +98,8 @@ def run_batch(manifest_path, config_path, runs_dir, *, paid=False, dry=False, re
     validate_config(cfg,require_key=True)
     with exclusive_lock(runs_dir/'.batch.lock'):
         audit=audit_manifest(manifest_path,runs_dir)
+        if audit['version_mismatch_runs']:
+            raise ValueError('existing_record_version_mismatch_use_new_experiment')
         if audit['duplicate_jobs'] or audit['unexpected_jobs']:
             raise ValueError('invalid_existing_batch')
         rows=[r for r in records(runs_dir) if r.get('experiment_id')==m['experiment_id'] and r.get('run_kind')=='live_api']

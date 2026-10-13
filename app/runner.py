@@ -63,7 +63,9 @@ def execute(cid, condition, variant, config, *, mock=False, dry=False, outdir=No
     if mock or dry:
         return _execute(cid, condition, variant, config, mock=mock, dry=dry, outdir=outdir, metadata=metadata)
     from .budget import reserve
-    with reserve(ROOT / 'runs', 64):
+    case = get_case(cid)
+    with reserve(ROOT / 'runs', 64, development=bool(case and case['split']=='dev'),
+                 retry=bool((metadata or {}).get('retry_of'))):
         return _execute(cid, condition, variant, config, outdir=outdir, metadata=metadata)
 
 

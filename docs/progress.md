@@ -50,3 +50,19 @@
 - Task 10: partial — 已写README、恢复入口、整合报告草案与统一声明；未伪造正式结果，剩余任务7/8及正式诊断待HTTP402解除。
 - Task 6: Ruling: 统一命令采用app/scoring.py及main.py score，评分规则保留results/scoring；结果文件严格使用results/results.csv — 保持用户要求的清楚目录与题包交付位置 — 代价是与旧计划部分文件表名称不同，README为准。
 - 修复实际Windows控制台编码故障：--help在cp1252失败，新增回归测试先失败，再将统一入口输出设为UTF-8。
+
+## 最新验收（2026-10-13）
+
+- 当前全套测试39/39通过。CLI帮助在cp1252环境回归通过；freeze → batch --dry-run → audit → score在.cache/cli-verification验证通过：40个预览、0个正式完成、五组分母均8且provisional。
+- 原始data/reference与lexical文件哈希校验通过。仅已授权的一次真实请求，1/64；页面已切回默认离线模式，回放不增加调用。
+- 真实失败的source_hashes记录的是当时开发代码，后续新增CLI/预算等造成变化属于冻结前开发；不回写历史日志。
+
+## 独立审查与单轮修复
+
+- Final review: fresh reviewer reviewed a3d12d3..2eea3d1，只读且无模型调用；没有Critical，发现两个Important及两项状态问题。
+- Final: fixed 混用冻结版本 — test_resume_rejects_existing_primary_from_another_frozen_version、test_score_rejects_mixed_versions_before_publishing RED→GREEN，版本不一致时先拒绝续跑/评分。
+- Final: fixed 分阶段预算未执行 — development/retry上限回归RED→GREEN，shared paid lock内计数，started保守计1，限额读取authorization。
+- Final: Ruling: 将语义待核验却provisional=false升为Important并修复 — 防止把未完成评价读为已完成；代价是已判对答案但未核语义的汇总仍为临时。
+- Final: Ruling: 协议的未授权/无API旧状态会误导后续执行，更新为实际授权及402记录 — 当前状态优先于旧草案措辞；代价是需以Git查看早期假设。
+- 全套44/44通过；Minor未留待修项。审查未判断的真实兼容性/正式效果将由后续真实实验验证；未读取T答案；用户本人核验、进阶和GitHub发布仍按原范围待办。评审未运行全套测试，执行者已独立实跑44项。
+- 2026-10-13 用户确认余额已处理，授权继续DeepSeek；继续原64次上限，无新增费用授权请求。
