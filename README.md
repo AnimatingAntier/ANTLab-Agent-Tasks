@@ -4,9 +4,20 @@
 
 根目录按提交要求提供[报告](report.md)、[决定](decisions.md)、[声明](declaration.md)入口；正文及附件仍按原分类维护，避免重复版本。
 
-本目录是用户指定的独立工作区。**基础代码、40次主实验和报告已完成；评分依据由助手整理，待用户本人复核。** 原ANTLab-Agent-Tasks题包不变，当前未推送GitHub。
+本目录是用户指定的独立工作区。**基础代码、40次主实验和报告已完成；评分依据由助手整理，待用户本人复核。** 原ANTLab-Agent-Tasks题包不变，发布目标为上方公开Fork的考核分支。
 
 主结果：R0 **4/8**、R1 **5/8**、R2 **4/8**、K **1/8**、改进 **3/8**；改进没有整体提升。全项目共 **57/64** 次模型请求，含3次技术失败。先看[报告正文](reports/基础题实验报告.md)、[本人核验清单](docs/本人核验清单.md)和[后续入口](docs/resume.md)。report.md只作导航，正文只维护一份。
+
+## 提交定位
+
+- 所选方向：**Agent**；当前完成基础题，进阶尚未完成。
+- 最终分支（本次基础题提交）：**codex/basic-assessment**。
+- 考核材料 commit SHA：**64da400b09dbd42b119b622e4b4b4cc1ac378358**（[固定版本](https://github.com/AnimatingAntier/ANTLab-Agent-Tasks/tree/64da400b09dbd42b119b622e4b4b4cc1ac378358)）。
+- 项目链接：[AnimatingAntier/ANTLab-Agent-Tasks](https://github.com/AnimatingAntier/ANTLab-Agent-Tasks)，为Shiina413/ANTLab-Agent-Tasks的公开Fork。
+- 本人核验清单：[待本人完成](docs/本人核验清单.md)；收集表尚未提交。
+- 此SHA固定已通过独立检出验证的代码、数据、报告和记录。之后的发布登记提交仅更新README和发布状态，实验结果与冻结代码不变。进阶或本人核验产生修订后，应重新确定并登记新的最终SHA。
+
+考核材料源于独立工作区，保留真实开发Git历史；Fork原main分支保留原题包。源码基点、数据校验值及查看改动的命令见文末。当前发布不表示基础与进阶的全部要求均已验收。
 
 ## 清晰的目录
 
@@ -31,7 +42,8 @@ config/local.json及.env不提交；密钥不复制进项目。缓存统一.cach
 Python3.10+，只用标准库，无需安装依赖。实际验证Windows/Python3.13.5。
 
 ```powershell
-Set-Location "E:\AUniversityStudy\大创\Agent_work\基础"
+git clone --branch codex/basic-assessment https://github.com/AnimatingAntier/ANTLab-Agent-Tasks.git
+Set-Location ANTLab-Agent-Tasks
 python main.py serve
 ```
 
@@ -95,8 +107,9 @@ python main.py batch --manifest config/basic-main-v1.json --config config/local.
 | 正式输入诊断、两次等价变体 | 完成，负面结果与回退局限已披露 |
 | 报告、阅读、三项决策、AI声明 | 已补充，待本人核验，详见独立清单 |
 | 离线配对/覆盖/敏感性与失败证据说明 | 已整理；0新增调用，历史错误详情无法追回 |
-| 进阶、最终GitHub整合/登记 | 未完成 |
+| GitHub考核材料 | 发布到本页所列公开Fork与分支 |
+| 进阶、本人核验、收集表登记 | 未完成 |
 
 原题包源码基点b028d90f43f44585cf085a3f607516a94f485e88，数据basic-context-v1.2；来源与SHA256见reference/source_manifest.json。初始提交a3d12d3保存移入基点；`git diff a3d12d3 HEAD -- app tests`查看主要改动。数据和app/lexical.py保留原字节，新增模块均有独立职责。
 
-正式代码冻结基点b7274fd0894172e2cfa119a68411ebd6f9bb9743。本地Git作者为Codex，未冒用用户身份。基础与进阶最终须在同一GitHub仓库、一份整合报告中提交，截止北京时间2026-10-16 23:59；用户尚未指定远程，未推送或登记。
+正式代码冻结基点b7274fd0894172e2cfa119a68411ebd6f9bb9743。本地Git作者为Codex，未冒用用户身份。基础与进阶最终须在同一GitHub仓库、一份整合报告中提交，截止北京时间2026-10-16 23:59；已按群通知选择公开Fork及上方考核分支；GitHub上传与收集表登记是两件事，收集表仍待本人提交。

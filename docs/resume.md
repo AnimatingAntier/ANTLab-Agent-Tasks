@@ -18,7 +18,7 @@
 3. 用户按独立清单核验T01假设、8题标签、逐run语义、实际请求/失败、T06诊断、三项决定与声明。未核验字段保持待填写；修订前保存旧标签/结果并记录依据，不改原始日志、不冒写human。
 4. 离线复算先输出.cache/user-review-score；补充用python results/scoring/build_report_supplement.py --output-dir .cache/user-review-supplement。完成核验与版本记录后再发布新的评价结果，不能用旧正式轮次伪装新探索。
 5. 如需新算法实验，保存本轮不动，明确探索版本、新ID与新预算；不能在本轮T结果上调参再回填。
-6. 进阶与基础需整合到同一最终GitHub仓库和一份报告；用户未指定远程，未发布或登记。最终本人声明与提交由用户核验。
+6. 进阶与基础需整合到同一最终GitHub仓库和一份报告；已选择公开Fork AnimatingAntier/ANTLab-Agent-Tasks，分支codex/basic-assessment；考核材料SHA见README。收集表未登记。最终本人声明及收集表内容由用户核验。新增进阶/评分修订后需重新确定最终SHA，不沿用旧提交版本。
 
 ## 运行与凭据
 

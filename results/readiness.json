@@ -14,5 +14,10 @@
   "report": "reports/基础题实验报告.md",
   "personal_review_checklist": "docs/本人核验清单.md",
   "material_supplement_model_calls": 0,
-  "error_detail_limit": "HTTP error body and transport root cause not preserved; cannot recover retrospectively."
+  "error_detail_limit": "HTTP error body and transport root cause not preserved; cannot recover retrospectively.",
+  "repository_url": "https://github.com/AnimatingAntier/ANTLab-Agent-Tasks",
+  "submission_branch": "codex/basic-assessment",
+  "assessment_commit": "64da400b09dbd42b119b622e4b4b4cc1ac378358",
+  "publication_status": "prepared_for_authorized_public_fork_push",
+  "collection_form_submitted": false
 }
