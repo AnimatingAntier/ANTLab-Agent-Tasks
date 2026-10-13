@@ -1,0 +1,78 @@
+{
+  "source_commit": "b028d90f43f44585cf085a3f607516a94f485e88",
+  "dataset_version": "basic-context-v1.2",
+  "files": {
+    "data/cases.json": {
+      "source": "基础/data/cases.json",
+      "sha256": "c37cda40ada89a18630dd7be098672f7e942e6f57e6199fe1aa2d6046e2b4961"
+    },
+    "data/dev_answers.json": {
+      "source": "基础/data/dev_answers.json",
+      "sha256": "96c5a6dc7063011632fc3e6b2ae5f16c111a714b862afdfb337ab0b95bd80e72"
+    },
+    "data/manifest.json": {
+      "source": "基础/data/manifest.json",
+      "sha256": "5ca24620a158ebb3429b6255b3e91f9fc26b749f12e41603245585ed32df8fb8"
+    },
+    "data/使用与标注说明.md": {
+      "source": "基础/data/使用与标注说明.md",
+      "sha256": "4a42c25f43a10a2bdd23ab2e863d79016bf5acebbe9e76ba8d5b1cb01a36799c"
+    },
+    "reference/README.md": {
+      "source": "基础/README.md",
+      "sha256": "e5fd136a03609198aec270e42ec435b647460fd4e71765d56a09f0fee342edcc"
+    },
+    "reference/01_考核题目.md": {
+      "source": "基础/01_考核题目.md",
+      "sha256": "3f1a16c719b970c45f4d95e38683fd7cfbc5c31274159ae3e5c60a7d0167087c"
+    },
+    "reference/02_阅读材料.md": {
+      "source": "基础/02_阅读材料.md",
+      "sha256": "d052da2e8aa9a008dbc368358eeb177769b5bf1a3c0ca638d5974aa40ab9e2b0"
+    },
+    "reference/03_提交要求.md": {
+      "source": "基础/03_提交要求.md",
+      "sha256": "a3aab974db5c8bb2eafdc224e5f277d86a796bfd6d0587884eb4738327e1eaea"
+    },
+    "reference/文件校验.json": {
+      "source": "基础/文件校验.json",
+      "sha256": "6a0d5b4686970898c2c0ef525d50c21a6d71915dd5436d839f29cb7cf5ef24ed"
+    },
+    "reference/05_提交与报告格式.md": {
+      "source": "进阶/05_提交与报告格式.md",
+      "sha256": "eed9c665e0f95bc5268ec8580cd0a78674b27fe509ce5e93873035a8b8ac2ffa"
+    },
+    "reference/00_共同规则与接口.md": {
+      "source": "进阶/00_共同规则与接口.md",
+      "sha256": "bc2ca4ca78435e000f167e94605c0463e8a982fdabfff476a0231f9d5bf5636f"
+    },
+    "app/export_runs.py": {
+      "source": "基础/starter/export_runs.py",
+      "sha256": "917a75073b65abe55e022a7d6fe6b3c3917aad0990cbb7e001d3eb6b8af6f27e"
+    },
+    "app/lexical.py": {
+      "source": "基础/starter/lexical.py",
+      "sha256": "1b4c56bf067895248db48dcc6c9ac528ad09ce7331b74168d204c52af2bc5dab"
+    },
+    "app/provider.py": {
+      "source": "基础/starter/provider.py",
+      "sha256": "b573f2359ad7e7a2818f9c8ba07952d4d7bfb2854a6d7e14b509da27dcf9c761"
+    },
+    "app/runner.py": {
+      "source": "基础/starter/runner.py",
+      "sha256": "a8c0e0171e410e2d9c916c068dc17c3fe1bbea8c97393d375d42a783908b81e4"
+    },
+    "app/server.py": {
+      "source": "基础/starter/server.py",
+      "sha256": "fd2174af5fe875ff37b24dba92f298b5602bfdef3859b4b584c2280fa14911d8"
+    },
+    "app/student.py": {
+      "source": "基础/starter/student.py",
+      "sha256": "f38f77aef7306f1abad868bde87170225ce5ec8b00f22f9f5a92ca78544de9b6"
+    },
+    "config/example.json": {
+      "source": "基础/config.example.json",
+      "sha256": "bebf8f7cdaad2dfe2b40d859770126f57037d11c0e2733da036c61a971d01019"
+    }
+  }
+}
