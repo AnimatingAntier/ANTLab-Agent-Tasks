@@ -1,0 +1,4 @@
+* text=auto eol=lf
+data/** -text
+reference/** -text
+app/lexical.py -text

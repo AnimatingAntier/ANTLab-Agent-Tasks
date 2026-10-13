@@ -34,3 +34,10 @@
 | 10 交付材料 | 待执行 | |
 
 原题包没有现成自动测试。已复制原始数据与代码基点，后续从行为测试开始实现。
+
+## 阶段验证
+
+- Task 1: complete — 来源校验通过，阅读与实验协议已保存。原始数据和 reference 文件哈希一致。
+- Task 2: complete — test_student 首轮4项失败，实现后5/5通过；身份重映射和跨段行为验证。
+- Task 3: complete（离线）— runtime 9项和 provider 3项先失败再通过；全套17/17通过。真实API尚未调用。
+- 验证记录：.cache/runtime-red.txt、provider-red.txt、runtime-green.txt（本地测试日志）；正式证据尚未生成。
