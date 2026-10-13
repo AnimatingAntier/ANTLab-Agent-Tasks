@@ -41,3 +41,4 @@
 - Task 2: complete — test_student 首轮4项失败，实现后5/5通过；身份重映射和跨段行为验证。
 - Task 3: complete（离线）— runtime 9项和 provider 3项先失败再通过；全套17/17通过。真实API尚未调用。
 - 验证记录：.cache/runtime-red.txt、provider-red.txt、runtime-green.txt（本地测试日志）；正式证据尚未生成。
+- Task 4: complete（离线）— 6项评分用例先失败，模块实现后全套23/23通过。答案正确性与语义支持独立；重试不替换首轮，缺标签保留待核验。

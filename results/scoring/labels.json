@@ -1,0 +1,43 @@
+{
+  "D01": {
+    "answer_type": "percent",
+    "expected_answer": "80%",
+    "reference_passages": [
+      "P312446",
+      "P898100"
+    ],
+    "reason": "68/85=80%。",
+    "provenance": "published_development_reference",
+    "reviewed_by_user": false
+  },
+  "D02": {
+    "answer_type": "insufficient",
+    "expected_answer": "证据不足",
+    "reference_passages": [],
+    "reason": "所给范围没有具体GPU型号；区域或耗时不足以推定。",
+    "provenance": "published_development_reference",
+    "reviewed_by_user": false
+  },
+  "D03": {
+    "answer_type": "number",
+    "expected_answer": "1.8",
+    "reference_passages": [
+      "P695887",
+      "P419087"
+    ],
+    "reason": "7.6-5.8=1.8秒。",
+    "provenance": "published_development_reference",
+    "reviewed_by_user": false
+  },
+  "D04": {
+    "answer_type": "name",
+    "expected_answer": "配置丙",
+    "reference_passages": [
+      "P579223",
+      "P611709"
+    ],
+    "reason": "乙与丙合格，丙预算更低。",
+    "provenance": "published_development_reference",
+    "reviewed_by_user": false
+  }
+}
