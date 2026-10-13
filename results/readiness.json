@@ -10,7 +10,7 @@
   "successful_generations": 54,
   "user_verified": false,
   "advanced_completed": false,
-  "published": false,
+  "published": true,
   "report": "reports/基础题实验报告.md",
   "personal_review_checklist": "docs/本人核验清单.md",
   "material_supplement_model_calls": 0,
@@ -18,6 +18,8 @@
   "repository_url": "https://github.com/AnimatingAntier/ANTLab-Agent-Tasks",
   "submission_branch": "codex/basic-assessment",
   "assessment_commit": "64da400b09dbd42b119b622e4b4b4cc1ac378358",
-  "publication_status": "prepared_for_authorized_public_fork_push",
-  "collection_form_submitted": false
+  "publication_status": "verified_on_public_github_fork",
+  "collection_form_submitted": false,
+  "github_default_branch": "codex/basic-assessment",
+  "github_clone_verified": true
 }

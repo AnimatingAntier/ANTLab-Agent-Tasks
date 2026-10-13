@@ -98,3 +98,5 @@
 ## GitHub发布准备（2026-10-14）
 
 用户已明确授权上传到公开Fork AnimatingAntier/ANTLab-Agent-Tasks。提交分支codex/basic-assessment，固定已验证材料版本64da400b09dbd42b119b622e4b4b4cc1ac378358；本条提交只登记发布信息和导航。进阶、本人核验、收集表仍待完成。新建私有仓库未上传材料，不作为提交目标。模型调用仍57次。
+
+- 发布完成并验证：公开Fork默认分支codex/basic-assessment，原main未动。从GitHub克隆后44项测试通过、40首轮审计通过、5份派生结果字节一致。发布登记状态更新，模型请求仍57次。本人核验、进阶与收集表登记不冒称已完成。
