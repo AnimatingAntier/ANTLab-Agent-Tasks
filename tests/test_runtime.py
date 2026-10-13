@@ -22,6 +22,12 @@ def response(content):
 
 
 class RuntimeTests(unittest.TestCase):
+    def setUp(self):
+        # These provider fixtures must not consume or depend on real experiment allowances.
+        budget = patch('app.budget.counts', return_value={'total':0,'development':0,'retries':0})
+        budget.start()
+        self.addCleanup(budget.stop)
+
     def test_output_is_strict_and_preserves_original_content(self):
         checks = required_module(self, 'app.output_checks')
         for content, want in [

@@ -10,6 +10,9 @@ from app.run_records import write_json
 
 class ExperimentTests(unittest.TestCase):
     def setUp(self):
+        budget = patch('app.budget.counts', return_value={'total':0,'development':0,'retries':0})
+        budget.start()
+        self.addCleanup(budget.stop)
         self.m = required_module(self, 'app.experiment')
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
