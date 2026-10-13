@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-13",
+  "scope": "offline_materials_only",
+  "model_calls_added": 0,
+  "existing_model_calls": 57,
+  "protected_files_unchanged": 138,
+  "run_file_set_unchanged": true,
+  "supplement_reproduction": "byte_identical",
+  "network_guard": "passed",
+  "detailed_pairs_checked": 8,
+  "relative_links_checked": 98,
+  "broken_links": [],
+  "personal_review_complete": false
+}

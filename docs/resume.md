@@ -13,10 +13,10 @@
 
 ## 后续顺序
 
-1. 读reports/report.md、docs/decisions.md及git status；python main.py status确认调用数。
+1. 读reports/基础题实验报告.md、docs/本人核验清单.md、docs/decisions.md及git status；python main.py status确认调用数。旧report.md只是入口。
 2. python main.py audit --manifest config/basic-main-v1.json --runs runs/main/basic-main-v1。
-3. 用户复核results/scoring/labels.json的原句与推导、reviews.jsonl的关键语义判断。修改评价要追加修订依据，不改原始日志，不冒写human。
-4. python main.py score --runs runs/main/basic-main-v1 --manifest config/basic-main-v1.json --output-dir results。
+3. 用户按独立清单核验T01假设、8题标签、逐run语义、实际请求/失败、T06诊断、三项决定与声明。未核验字段保持待填写；修订前保存旧标签/结果并记录依据，不改原始日志、不冒写human。
+4. 离线复算先输出.cache/user-review-score；补充用python results/scoring/build_report_supplement.py --output-dir .cache/user-review-supplement。完成核验与版本记录后再发布新的评价结果，不能用旧正式轮次伪装新探索。
 5. 如需新算法实验，保存本轮不动，明确探索版本、新ID与新预算；不能在本轮T结果上调参再回填。
 6. 进阶与基础需整合到同一最终GitHub仓库和一份报告；用户未指定远程，未发布或登记。最终本人声明与提交由用户核验。
 
@@ -25,3 +25,7 @@
 python main.py serve默认离线，浏览器127.0.0.1:8765。config/local.json不提交，已有凭据位于E:/MyApp/VibeShell/.env，仅读取DEEPSEEK_API_KEY；不要输出密钥。真实调用的旧授权上限不会因重启自动归零，程序以保留日志计数。
 
 冻结代码基点b7274fd0894172e2cfa119a68411ebd6f9bb9743，UTC 2026-10-13 12:07:40。主流程文件受hash保护；报告、评价与独立诊断不属于生成代码。
+
+## 本次材料补充
+
+新增完整配对表、报告补充JSON和离线生成脚本，均在results/既有分类内。历史失败的状态/错误类型/耗时已留档，HTTP错误体与底层异常原因未保存，不能补造。原主结果、运行日志、标签与冻结代码保持原样。模型请求仍57次；新方法只列为后续建议，本次不执行。

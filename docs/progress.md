@@ -83,3 +83,14 @@
 - Final review未判断项的处置：真实兼容性已由成功开发/API记录验证；T参考答案在主请求结束后依据原文推导且留假设；发布/进阶/本人核验按范围待办；全套测试由执行者实跑，未以审查者未执行为通过依据。
 
 - Final verification: 44/44 tests PASS; 40 actual messages/selected passages exactly equal saved preflight; frozen code/config/rubric hashes unchanged; offline re-score byte-identical; original source hashes PASS; git diff --check PASS.
+
+## 报告与材料补充（2026-10-13；0新增模型调用）
+
+- 按用户要求补齐设计要素与否定观察（事后归纳）、逐题覆盖/语义/耗时/调用配对、T01判分敏感性和失败证据边界。
+- 原主结果、labels/reviews、所有runs与冻结文件保持不变。新增确定性离线脚本results/scoring/build_report_supplement.py及两份结果附件，独立于冻结评分器。
+- 报告唯一正文为reports/基础题实验报告.md；report.md改为导航。文献与决策的旧“未运行”状态明确标为历史，当前状态给出对应证据。
+- 更正前文“错误原样保留”：当时保留了状态/码或类型与耗时，并未保存HTTP错误体和底层异常原因，详细错误无法补回。该说明不改写原始记录。
+- 新建docs/本人核验清单.md，逐项给出入口、方法和待填写位置；全部保持待本人核验，不代签、不修改judgment_source为human。
+- 后续算法方向只列建议，未实施或验证；不重跑主实验、不执行新的付费调用。
+
+- 补充验证：138个受保护文件哈希及runs文件集合未变；网络调用拦截下复算通过，两份补充附件字节一致；8对逐条核对原始日志，98个相对链接无断链，Git diff --check通过。此次未改应用代码，未新增模型调用。验证记录：results/materials-verification.json。

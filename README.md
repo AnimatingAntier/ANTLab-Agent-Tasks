@@ -2,7 +2,7 @@
 
 本目录是用户指定的独立工作区。**基础代码、40次主实验和报告已完成；评分依据由助手整理，待用户本人复核。** 原ANTLab-Agent-Tasks题包不变，当前未推送GitHub。
 
-主结果：R0 **4/8**、R1 **5/8**、R2 **4/8**、K **1/8**、改进 **3/8**；改进没有整体提升。全项目共 **57/64** 次模型请求，含3次技术失败。先看[报告](reports/report.md)和[后续入口](docs/resume.md)。
+主结果：R0 **4/8**、R1 **5/8**、R2 **4/8**、K **1/8**、改进 **3/8**；改进没有整体提升。全项目共 **57/64** 次模型请求，含3次技术失败。先看[报告正文](reports/基础题实验报告.md)、[本人核验清单](docs/本人核验清单.md)和[后续入口](docs/resume.md)。report.md只作导航，正文只维护一份。
 
 ## 清晰的目录
 
@@ -14,9 +14,9 @@
   data/                 原始题包数据，字节不变
   reference/            原要求与来源校验
   tests/                离线自动测试
-  docs/                 计划、协议、阅读、决策、诊断、进度
+  docs/                 计划、协议、阅读、决策、诊断、进度、本人核验
   runs/                 原始记录：dev / main / variants / diagnostics
-  results/              逐例CSV、汇总与配对；scoring/判分依据
+  results/              原主结果、完整配对、离线补充；scoring/规则与复算
   reports/              一份报告、声明；assets/截图
 ```
 
@@ -38,9 +38,10 @@ python -m unittest discover -s tests -v
 python main.py status
 python main.py audit --manifest config/basic-main-v1.json --runs runs/main/basic-main-v1
 python main.py score --runs runs/main/basic-main-v1 --manifest config/basic-main-v1.json --output-dir results
+python results/scoring/build_report_supplement.py
 ```
 
-44项测试通过。审计应为40首轮完成、1首轮技术失败、1正式重试、0缺失/重复/版本漂移。离线score生成results/results.csv、basic-summary.json、basic-pairs.csv；原始日志不修改。
+44项测试通过。审计应为40首轮完成、1首轮技术失败、1正式重试、0缺失/重复/版本漂移。离线score生成results/results.csv、basic-summary.json、basic-pairs.csv；原始日志不修改。补充脚本只读取现有记录，生成basic-pairs-detailed.csv和report-supplement.json，不导入provider、不读取凭据、不调用网络；其事后统计定义与T01敏感性场景不改变冻结主评分。
 
 等价变体已有D01和T06两组，预测先于检查保存，均0模型调用。如需重复检查，用新目录：
 
@@ -53,6 +54,8 @@ D01保持内容顺序；T06由于并列锚点回退不保持顺序，局限已�
 ## 数据、判分和重要边界
 
 - 首次失败留在各条件8题分母；重试独立UUID、retry_of，不替换主结果。
+- 成功响应原文已保存；失败仅保留状态、HTTP码或异常类型与耗时。HTTP错误体/底层异常原因未完整保存，无法补回；不能声称所有原始错误详情齐全。
+- 完整配对表分开列输入参考覆盖、引用参考覆盖与语义支持。T05覆盖不适用，T01参考解释及敏感性分析待本人核验。
 - API成功、JSON格式、引用ID定位、答案正确和语义支持分别记录。K合理拒答可以有语义支持，却未完成完整任务。
 - labels.json包含原句、推导与标注来源；reviews.jsonl逐run_id保存单一结论的语义判断。用户复核修订应追加理由和历史，不冒写已人工确认。T01有显式参考解释假设。
 - T06基线与改进messages实际相同而答案不同，因此该例退化不能归因于重排。
@@ -86,7 +89,8 @@ python main.py batch --manifest config/basic-main-v1.json --config config/local.
 | 前后端真实链路、内容组织、日志、测试 | 完成 |
 | 冻结、40首轮、1正式重试、逐例/配对表 | 完成，失败保留 |
 | 正式输入诊断、两次等价变体 | 完成，负面结果与回退局限已披露 |
-| 报告、阅读、三项决策、AI声明 | 已整理，待本人核验 |
+| 报告、阅读、三项决策、AI声明 | 已补充，待本人核验，详见独立清单 |
+| 离线配对/覆盖/敏感性与失败证据说明 | 已整理；0新增调用，历史错误详情无法追回 |
 | 进阶、最终GitHub整合/登记 | 未完成 |
 
 原题包源码基点b028d90f43f44585cf085a3f607516a94f485e88，数据basic-context-v1.2；来源与SHA256见reference/source_manifest.json。初始提交a3d12d3保存移入基点；`git diff a3d12d3 HEAD -- app tests`查看主要改动。数据和app/lexical.py保留原字节，新增模块均有独立职责。

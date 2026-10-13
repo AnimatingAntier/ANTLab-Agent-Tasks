@@ -21,3 +21,7 @@ D01的ID+顺序变体保持正文集合、正文顺序、前两段关联。T06�
 开发覆盖检查属于事后整理：[development-coverage.json](../runs/diagnostics/development-coverage.json)。D01/D03/D04的K缺一个公开参考所需段落；actual messages保持K清单，缺失发生在固定选段阶段。D02没有GPU信息，空参考ID不代表覆盖满分。
 
 复算覆盖：读取data/dev_answers.json的evidence_ids，对开发题调用app.runner.prepare(id,'K','baseline')，比较original与json.loads(messages[-1]['content'])['passages']。不把开发诊断规则导入推理。
+
+## 失败留档范围补充（2026-10-13事后核查）
+
+402只保存HTTP状态和错误码；两条URLError只保存异常类型与完整请求耗时，未保存HTTP错误响应体或底层reason。因此能复核失败发生及首轮/重试关系，不能复原详细故障，也不能仅凭URLError判断DNS、TLS、连接或服务端原因。失败详情清单见[离线补充](../results/report-supplement.json)的failure_evidence。后续版本可增加脱敏错误详情；本轮不改冻结代码、不回写原始日志、不追加调用。
