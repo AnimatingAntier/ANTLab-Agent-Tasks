@@ -1,0 +1,67 @@
+{
+  "run_kind": "local_rule",
+  "call_count": 0,
+  "scope": "development_only",
+  "retrospective": true,
+  "rows": [
+    {
+      "case_id": "D01",
+      "required_reference_ids": [
+        "P312446",
+        "P898100"
+      ],
+      "visible_ids": [
+        "P133261",
+        "P312446"
+      ],
+      "missing_reference_ids": [
+        "P898100"
+      ],
+      "message_preserves_K": true,
+      "coverage_claim_applicable": true
+    },
+    {
+      "case_id": "D02",
+      "required_reference_ids": [],
+      "visible_ids": [
+        "P406170",
+        "P640945"
+      ],
+      "missing_reference_ids": [],
+      "message_preserves_K": true,
+      "coverage_claim_applicable": false
+    },
+    {
+      "case_id": "D03",
+      "required_reference_ids": [
+        "P695887",
+        "P419087"
+      ],
+      "visible_ids": [
+        "P695887",
+        "P995129"
+      ],
+      "missing_reference_ids": [
+        "P419087"
+      ],
+      "message_preserves_K": true,
+      "coverage_claim_applicable": true
+    },
+    {
+      "case_id": "D04",
+      "required_reference_ids": [
+        "P579223",
+        "P611709"
+      ],
+      "visible_ids": [
+        "P188543",
+        "P579223"
+      ],
+      "missing_reference_ids": [
+        "P611709"
+      ],
+      "message_preserves_K": true,
+      "coverage_claim_applicable": true
+    }
+  ]
+}

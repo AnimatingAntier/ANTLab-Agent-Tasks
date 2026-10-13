@@ -1,0 +1,9 @@
+{
+  "status": "blocked_on_development_HTTP_402",
+  "formal_manifest": null,
+  "expected_main_jobs": 40,
+  "actual_main_jobs": 0,
+  "development_calls": 1,
+  "authorized_total_calls": 64,
+  "successful_generations": 0
+}

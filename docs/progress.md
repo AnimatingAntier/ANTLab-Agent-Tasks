@@ -46,3 +46,7 @@
 - Task 6: complete（调度代码）— 6项批次测试通过，临时目录40任务、续跑、重试、漂移、停止条件；全套38/38通过。新增全局64次上限及串行锁。正式清单尚未冻结。
 - Task 7: blocked by HTTP 402 — 用户授权DeepSeek最多64次，已尝试1次；依据官方错误码为余额不足。禁止重复自动请求。
 - Task 9: partial — D01正文/ID等价变体完成，预测先于执行保存；正式结果诊断待主实验。
+
+- Task 10: partial — 已写README、恢复入口、整合报告草案与统一声明；未伪造正式结果，剩余任务7/8及正式诊断待HTTP402解除。
+- Task 6: Ruling: 统一命令采用app/scoring.py及main.py score，评分规则保留results/scoring；结果文件严格使用results/results.csv — 保持用户要求的清楚目录与题包交付位置 — 代价是与旧计划部分文件表名称不同，README为准。
+- 修复实际Windows控制台编码故障：--help在cp1252失败，新增回归测试先失败，再将统一入口输出设为UTF-8。

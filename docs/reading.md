@@ -23,3 +23,7 @@
 依据题包阅读提要与本地 provider 计时位置，完整 API 请求耗时包含客户端可见的等待，不提供服务端排队、Prefill、Decode 或 GPU 型号证据。后续若研究性能机制，需要推理服务提供独立时间戳及负载字段。
 
 目前属于文献与源码分析，尚无真实模型结果或公开产品亲测结论。
+
+## 公开系统：ALCE实现
+
+已阅读[官方仓库README](https://github.com/princeton-nlp/ALCE)的Code Structure、Reproducing Baselines、Evaluation和Human Evaluation入口。它把生成与评价分离，配置记录检索及方法，保存输出与配置供后续评价；本项目同样把生成日志和评分文件分开。ALCE的大语料检索与自动指标不能直接移植为本题七段短记录的效果结论；本次没有安装或复跑ALCE。

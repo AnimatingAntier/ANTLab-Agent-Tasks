@@ -8,6 +8,13 @@ from app.runner import get_case
 
 
 class WorkflowTests(unittest.TestCase):
+    def test_cli_help_works_on_non_chinese_windows_encoding(self):
+        import os, subprocess, sys
+        from app.run_records import ROOT
+        result=subprocess.run([sys.executable,'main.py','--help'],cwd=ROOT,
+            env=dict(os.environ,PYTHONIOENCODING='cp1252'),capture_output=True)
+        self.assertEqual(result.returncode,0,result.stderr.decode('utf-8',errors='replace'))
+
     def test_runner_checks_shared_budget_before_any_live_request(self):
         from app.runner import execute
         from test_provider import CONFIG
