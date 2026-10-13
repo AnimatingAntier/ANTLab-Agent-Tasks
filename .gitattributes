@@ -2,3 +2,8 @@
 data/** -text
 reference/** -text
 app/lexical.py -text
+
+# Keep recorded evidence and its manifests byte-identical across Git checkouts.
+runs/** -text whitespace=cr-at-eol
+results/** -text whitespace=cr-at-eol
+config/basic-main-v1.json -text whitespace=cr-at-eol
