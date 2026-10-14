@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-14",
+  "created_utc": "2026-10-14T05:11:56.302073+00:00",
+  "reviewer": "Codex assistant",
+  "reviewed_by_user": false,
+  "scope": "T01-T08: 56 source passages, 40 primary records and 1 retry; deterministic offline checks plus assistant source judgments",
+  "review_rows": "results/scoring/assistant-review-20261014.jsonl",
+  "original_labels_and_scores_changed": false,
+  "frozen_source_hashes_match": true,
+  "protected_original_files_unchanged": 138,
+  "original_run_file_set_and_bytes_unchanged": true,
+  "checked_records": 41,
+  "successful_raw_responses_checked": 40,
+  "failed_primary_checked": 1,
+  "all_input_source_preflight_and_csv_checks_passed": true,
+  "frozen_primary_results": {
+    "K": {
+      "correct": 1,
+      "denominator": 8
+    },
+    "R0": {
+      "correct": 4,
+      "denominator": 8
+    },
+    "R0_improved": {
+      "correct": 3,
+      "denominator": 8
+    },
+    "R1": {
+      "correct": 5,
+      "denominator": 8
+    },
+    "R2": {
+      "correct": 4,
+      "denominator": 8
+    }
+  },
+  "second_review_semantic_counts": {
+    "supported": 23,
+    "disputed": 3,
+    "contradicted": 12,
+    "insufficient": 2,
+    "not_checked": 1
+  },
+  "semantic_disagreements": [
+    "9566f471-a9d5-4429-acca-19680438ef86",
+    "bcdd30ae-d0ca-45fb-97e7-954dfe8fc754",
+    "5e52a7b9-4429-47c2-b494-c0b4af15b20d"
+  ],
+  "t01_disagreement": "Three full-input abstentions are interpretation-dependent; retain original scoring and append dispute.",
+  "formal_audit": {
+    "experiment_id": "basic-main-v1",
+    "expected": 40,
+    "completed": 40,
+    "failed": 1,
+    "pending": 0,
+    "missing_jobs": [],
+    "interrupted": 0,
+    "retries": 1,
+    "duplicate_jobs": [],
+    "unexpected_jobs": [],
+    "version_mismatch_runs": [],
+    "consumed_calls": 41
+  },
+  "byte_identical_reproduction": {
+    "results.csv": true,
+    "basic-summary.json": true,
+    "basic-pairs.csv": true,
+    "basic-pairs-detailed.csv": true,
+    "report-supplement.json": true
+  },
+  "t06_identical_actual_messages_and_config": true,
+  "variants": {
+    "D01-both-20261006": {
+      "same_text_set": true,
+      "same_content_order": true,
+      "prediction_hash_matches": true,
+      "model_calls": 0
+    },
+    "T06-both-20261006": {
+      "same_text_set": true,
+      "same_content_order": false,
+      "prediction_hash_matches": true,
+      "model_calls": 0
+    }
+  },
+  "model_calls_added": 0,
+  "existing_model_calls": 57,
+  "technical_successes": 54,
+  "api_reported_usage": {
+    "prompt_tokens": 91029,
+    "completion_tokens": 1392,
+    "total_tokens": 92421
+  },
+  "no_network_guard": "socket connections rejected during verification and rescoring",
+  "tests": {
+    "command": "python -X utf8 -m unittest discover -s tests -q",
+    "passed": 44,
+    "elapsed_seconds": 8.952
+  },
+  "remaining_limits": [
+    "Human authorship, personal reading and personal judgments require the user.",
+    "T01 interpretation unresolved; no official evaluation labels supplied.",
+    "Historical HTTP error bodies and transport root causes unavailable.",
+    "Advanced task and collection form remain incomplete."
+  ],
+  "evidence_sha256": {
+    "data/cases.json": "c37cda40ada89a18630dd7be098672f7e942e6f57e6199fe1aa2d6046e2b4961",
+    "config/basic-main-v1.json": "fe2c2dd05a09a7a0f9eb8d96d2bb29976ed0e0ce103981c79cdbccc51962f85c",
+    "results/scoring/rubric.md": "eb0e06fe5ee11ec2a2c8ffda81d0fa60e0956bd611ad81232d66179ea3301c45",
+    "results/scoring/labels.json": "295376107be656c6841362db2a9830c1e999a2690bd20edd42d8cb5b30f3acd9",
+    "results/scoring/reviews.jsonl": "b68d93dcec4a2192356048946ef54cda78d88ed05a84dd7fe8756cb021ba9af0",
+    "results/results.csv": "a46e6df935802728964da8423ca3f6b2bff0a17c5e972aab9fa352c2e94e8ad9",
+    "results/scoring/assistant-review-20261014.jsonl": "99a278a73295feb595da19ecb61eef22e10bba01e46e18fcda8ff05ca624a3bf"
+  },
+  "local_readonly_replay": {
+    "startup": "passed",
+    "paid_disabled": true,
+    "cases": 12,
+    "live_record_listing": 57,
+    "replayed_run_ids": [
+      "f434b565-5787-4a08-b6aa-551c275b6788",
+      "a07297a5-e2c7-45f7-8789-ffe676d2375a",
+      "aaebed1b-f49a-4ad0-9edb-6fec1fe7f322",
+      "f166f75b-54d7-4126-b483-ca83751c42c2",
+      "c09bd211-5057-45c1-b488-d46f82121782"
+    ],
+    "replayed_payloads_equal_disk": true,
+    "run_files_unchanged": true,
+    "visual_layout_retested": false
+  }
+}
