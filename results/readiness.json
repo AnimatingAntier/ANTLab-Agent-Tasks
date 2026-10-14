@@ -17,7 +17,7 @@
   "error_detail_limit": "HTTP error body and transport root cause not preserved; cannot recover retrospectively.",
   "repository_url": "https://github.com/AnimatingAntier/ANTLab-Agent-Tasks",
   "submission_branch": "codex/basic-assessment",
-  "assessment_commit": "64da400b09dbd42b119b622e4b4b4cc1ac378358",
+  "assessment_commit": "991d3d2fa11d4f1eb9d45dd3ed4be580ff826aab",
   "publication_status": "verified_on_public_github_fork",
   "collection_form_submitted": false,
   "github_default_branch": "codex/basic-assessment",
@@ -27,5 +27,6 @@
   "assistant_review_record": "docs/助手复核记录.md",
   "assistant_review_model_calls": 0,
   "assistant_review_formal_records": 41,
-  "personal_judgments_confirmed": false
+  "personal_judgments_confirmed": false,
+  "prior_assessment_commit": "64da400b09dbd42b119b622e4b4b4cc1ac378358"
 }

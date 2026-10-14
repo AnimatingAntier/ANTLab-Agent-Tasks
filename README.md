@@ -12,10 +12,10 @@
 
 - 所选方向：**Agent**；当前完成基础题，进阶尚未完成。
 - 最终分支（本次基础题提交）：**codex/basic-assessment**。
-- 考核材料 commit SHA：**64da400b09dbd42b119b622e4b4b4cc1ac378358**（[固定版本](https://github.com/AnimatingAntier/ANTLab-Agent-Tasks/tree/64da400b09dbd42b119b622e4b4b4cc1ac378358)）。
+- 考核材料 commit SHA：**991d3d2fa11d4f1eb9d45dd3ed4be580ff826aab**（[固定版本](https://github.com/AnimatingAntier/ANTLab-Agent-Tasks/tree/991d3d2fa11d4f1eb9d45dd3ed4be580ff826aab)）。
 - 项目链接：[AnimatingAntier/ANTLab-Agent-Tasks](https://github.com/AnimatingAntier/ANTLab-Agent-Tasks)，为Shiina413/ANTLab-Agent-Tasks的公开Fork。
 - 本人核验清单：[待本人完成](docs/本人核验清单.md)；收集表尚未提交。
-- 此SHA固定已通过独立检出验证的代码、数据、报告和记录。之后的发布登记提交仅更新README和发布状态，实验结果与冻结代码不变。进阶或本人核验产生修订后，应重新确定并登记新的最终SHA。
+- 此SHA固定代码、数据、报告、原始记录及2026-10-14助手复核附件。原材料版本64da400保留，冻结代码、标签与主结果不变；本版通过离线复核和复算。之后的发布登记提交只更新导航与发布状态。进阶或本人判断产生修订后，应重新确定并登记新的最终SHA。
 
 考核材料源于独立工作区，保留真实开发Git历史；Fork原main分支保留原题包。源码基点、数据校验值及查看改动的命令见文末。当前发布不表示基础与进阶的全部要求均已验收。
 
